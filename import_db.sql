@@ -56,7 +56,11 @@ INSERT INTO
   question_followers (user_id, question_id)
 VALUES
 ((SELECT id FROM users WHERE lname = "O'Reilly"),
-  (SELECT id FROM questions WHERE title = "Why is the sky blue?"));
+  (SELECT id FROM questions WHERE title = "Why is the sky blue?")),
+((SELECT id FROM users WHERE lname = "Stewart"),
+  (SELECT id FROM questions WHERE title = "Why is the sky blue?")),
+((SELECT id FROM users WHERE lname = "O'Reilly"),
+  (SELECT id FROM questions WHERE title = "The agnostic"));
   
 INSERT INTO
   replies(question_id, parent_reply_id, reply_user_id, body)
